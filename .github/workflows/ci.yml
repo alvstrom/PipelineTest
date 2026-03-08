@@ -32,3 +32,5 @@ jobs:
       - name: Test Docker Build
         run: |
           docker build -t weather-api:test .
+          docker build -t weather-api:${{ github.sha }} .
+          docker build -t weather-api:latest .
